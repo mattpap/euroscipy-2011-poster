@@ -1,0 +1,5 @@
+output/
+*.pyg
+*.py[co]
+*.sw[op]
+*~
