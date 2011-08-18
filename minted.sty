@@ -36,7 +36,7 @@
 \ifwindows
   \providecommand\DeleteFile[1]{\immediate\write18{del #1}}
 \else
-  \providecommand\DeleteFile[1]{\immediate\write18{rm #1}}
+  \providecommand\DeleteFile[1]{\immediate\write18{rm -f #1}}
 \fi
 \newboolean{AppExists}
 \providecommand\TestAppExists[1]{
