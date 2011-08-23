@@ -1,14 +1,17 @@
 INPUT=poster
 OUTPUT=output
+VIEWER=evince
 
-all:
+all: build view
+
+.PHONY: build view clean
+
+build:
 	mkdir -p $(OUTPUT)
 	pdflatex -shell-escape -output-directory=$(OUTPUT) $(INPUT).tex
 
-.PHONY: view clean
-
 view:
-	evince output/$(INPUT).pdf
+	$(VIEWER) output/$(INPUT).pdf
 
 clean:
 	rm -rf $(OUTPUT)/*
