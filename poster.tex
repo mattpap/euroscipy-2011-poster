@@ -179,7 +179,7 @@ License         & GNU GPL                      & GNU GPL               & New BSD
 Author          & William Stein                & Ola Skavhaug          & Ondrej Certik          & Pearu Peterson              & Burcin Erocal      \\
 Contributors    & $>150$                       & $7$                   & $>120$                 & $3$                         & $7$                \\
 SCM software    & Mercurial (HG)               & SVN                   & GIT                    & SVN                         & Mercurial (HG)     \\
-Languages       & Cython, Python               & C++, Python           & Python                 & Python, C                   & Cython, Python     \\
+Languages       & Cython, Python               & C++, Python           & Python                 & Python, C                   & C++                \\
 Philosophy      & multiple wrappers            & wrappers (Ginac)      & developed from scratch & derivative of SymPy         & wrappers (Ginac)   \\
 Web interface   & www.sagenb.org               & none                  & live.sympy.org         & none                        & www.sagenb.org     \\
 \end{tabular}
@@ -216,7 +216,7 @@ to fix SymPy performance and robustness issues. SymPyCore does not yet have near
 features as SymPy. Our goal is to work on in direction of merging the efforts with the SymPy
 project in the future.
 \\
-{\color{green} Pros:} fast
+{\color{green} Pros:} small library, fast, pure Python (with optional C extensions)
 \\
 {\color{red} Cons:} only basic functionality, weak documentation, no community
 \\\\
@@ -225,7 +225,7 @@ expressions. It currently provides the backend for symbolic expressions in Sage.
 difference between Pynac and GiNaC is that Pynac relies on Sage to provide the operations
 on numerical types, while GiNaC depends on CLN for this purpose.
 \\
-{\color{green} Pros:} fast, uses Cython for wrapping C++
+{\color{green} Pros:} fast
 \\
 {\color{red} Cons:} not a standalone library (depends on Sage), only basic functionality
 }
@@ -261,15 +261,15 @@ and quite different semantics:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 SymPyCore is a fork of \texttt{sympy.core} module. The project was created
 to quickly prototype a new fast symbolic core for SymPy. SymPyCore, however,
-diverged from SymPy and it's unlikely it will be merged with it any time soon.
+diverged from SymPy and it's unlikely it will be merged with it in soon.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Pynac vs. Swiginac}{name=pynacswiginac,column=2,span=1,below=sympysympycore}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Pynac and Swiginac both wrap GiNaC, a C++ library for symbolic computing. Pynac
-uses Cython for this and Swiginac uses SWIG library. Both don't wrap the entire
-library. Pynac requires Sage for coefficient arithmetics, so you can't use
+uses Python's C API for this and Swiginac uses SWIG library. Both don't wrap the
+entire library. Pynac requires Sage for coefficient arithmetics, so you can't use
 it a standalone library, as opposed to Swiginac.
 }
 
