@@ -1,8 +1,8 @@
 Poster for EuroSciPy 2011 conference
 ====================================
 
-To build this poster you need any LaTeX distribution that is supported
-by ``baposter`` and ``pygments`` library. In a terminal issue::
+To build this poster you need ``pygments`` library and any LaTeX
+distribution that is supported by ``baposter``. In a terminal issue::
 
     $ make
 
