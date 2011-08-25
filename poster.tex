@@ -15,9 +15,8 @@
 \usepackage{multicol}
 
 \usepackage{pgfbaselayers}
-\pgfdeclarelayer{background}
 \pgfdeclarelayer{foreground}
-\pgfsetlayers{background,main,foreground}
+\pgfsetlayers{main,foreground}
 
 \newcommand{\captionfont}{\footnotesize}
 
@@ -56,11 +55,7 @@
 %%% Format it to your taste with the options
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \typeout{Poster Starts}
-\background{
-  \begin{tikzpicture}[remember picture,overlay]
-    \draw (current page.north west)+(-2em,-0em) node[anchor=north west] {\hspace{-2em}\includegraphics[height=1.1\textheight]{background}};
-  \end{tikzpicture}
-}
+
 \definecolor{silver}{cmyk}{0,0,0,0.3}
 \definecolor{yellow}{cmyk}{0,0,0.9,0.0}
 \definecolor{reddishyellow}{cmyk}{0,0.22,1.0,0.0}
@@ -78,8 +73,8 @@
   % Column spacing
   colspacing=0.5em,
   % Color style
-  bgColorOne=lighteryellow,
-  bgColorTwo=lightestyellow,
+  bgColorOne=white, %lighteryellow,
+  bgColorTwo=white, %lightestyellow,
   borderColor=reddishyellow,
   headerColorOne=yellow,
   headerColorTwo=reddishyellow,
@@ -94,9 +89,8 @@
   headerheight=0.08\textheight,
   headershape=roundedright,
   headershade=plain,
-  headerfont=\large\textsf, %Sans Serif
+  headerfont=\large\textsf,
   boxshade=plain,
-%  background=shade-tb,
   background=plain,
   linewidth=2pt
   }
