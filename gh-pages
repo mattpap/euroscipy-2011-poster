@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp output/*.pdf .
+git add *.pdf
+git ci -m "Update"
