@@ -1,5 +1,12 @@
 #!/bin/bash
 
-cp output/*.pdf .
+if [ -e output ]; then
+    cp output/*.pdf .
+fi
+
+if [ -e introduction/output ]; then
+    cp introduction/output/*.pdf .
+fi
+
 git add *.pdf
 git ci -m "Update"
