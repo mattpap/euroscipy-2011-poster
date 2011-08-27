@@ -1,0 +1,86 @@
+\documentclass[10pt]{beamer}
+
+\usepackage[utf8x]{inputenc}
+
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme[bullet=circle,
+          titleline=true,
+          pageofpages=of,
+          alternativetitlepage=true]{Torino}
+
+\usepackage{ragged2e}
+\usepackage{hyphenat}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{multibib}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{decorations}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\title{Review of Python-based symbolic mathematics \newline systems and libraries}
+\author{Mateusz Paprocki \texttt{<mattpap@gmail.com>}}
+\institute{SymPy Development Team}
+\date{\today}
+
+\newenvironment{jblock}[1]{
+    \begin{block}{#1}\justifying\nohyphens
+}{
+    \end{block}
+}
+
+\setbeamercovered{transparent}
+
+\begin{document}
+
+\begin{frame}[plain,t]
+    \maketitle
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{The contents of the poster}
+    \framesubtitle{}
+
+    \begin{columns}
+        \begin{column}[l]{0.4\textwidth}
+            \textbf{Review of:}
+            \begin{itemize}
+                \item Sage
+                \item Swiginac
+                \item SymPy
+                \item SymPyCore
+                \item Pynac
+            \end{itemize}
+            \vspace{-0.5cm}
+            \begin{center}
+                \includegraphics[scale=0.2]{images/sage_logo_new.png}
+                \includegraphics[scale=0.075]{images/sympy-logo.pdf}
+            \end{center}
+        \end{column}
+        \begin{column}[l]{0.4\textwidth}
+            \textbf{Criteria:}
+            \begin{itemize}
+                \item available features
+                \item speed of computations
+                \item quality of documentation
+                \item extensibility
+                \item embeddability
+                \item community support
+                \item license
+                \item \ldots
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\end{document}
